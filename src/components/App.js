@@ -23,6 +23,22 @@ function App() {
     setComics(updatedComic);
   }
 
+  function handleDeleteComic(id) {
+    const updatedComicsArray = comics.filter((comic) => comic.id !== id);
+    setComics(updatedComicsArray);
+  }
+
+  function handleUpdateComic(updatedComic) {
+    const updatedComicsArray = comics.map((comic) => {
+      if (comic.id === updatedComic.id) {
+        return updatedComic;
+      } else {
+        return comic;
+      }
+    });
+    setComics(updatedComicsArray);
+  }
+
   const displayedComics = comics.filter((comic) => {
     return comic.super_hero.toLowerCase().includes(searchTerm.toLowerCase());
   });
@@ -36,7 +52,10 @@ function App() {
       <AddComics
         handleNewComic={handleNewComic} />
       <ComicList
-        comics={displayedComics} />
+        comics={displayedComics}
+        handleDeleteComic={handleDeleteComic}
+        handleUpdateComic={handleUpdateComic} />
+        
     </div>
   );
 };

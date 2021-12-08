@@ -9,11 +9,7 @@ function Search({ searchTerm, setSearchTerm }) {
         id="search"
         placeholder="Type a name to search..."
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button
-      onChange={(e) => setSearchTerm(e.target.value)}
-      >Click me 😉</button>
+        onChange={(e) => setSearchTerm(e.target.value)}/>
     </div>
   );
 }
