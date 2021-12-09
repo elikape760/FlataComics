@@ -1,0 +1,48 @@
+
+.new-comic-form {  
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    background-color: rgba(187, 91, 12, 0.445);
+    
+      }
+      
+      #Card111 {
+        list-style: none;
+      }
+      
+      #Card111 {
+        margin: 1rem;
+        border-style: outset;
+        border-color: gray;
+        background-color: white;
+        box-shadow: 10px 5px 5px rgb(121, 112, 112);
+      }
+.new-comic-form form {
+    display: flex;
+    justify-content: center;
+}
+      
+.new-comic-form input {
+    margin-right: 1rem;
+    flex: 1;
+}
+      
+.new-comic-form button {
+    width: 150px;
+}
+
+#header-main{
+    background-image:url("https://i.pinimg.com/originals/a6/f0/b8/a6f0b85367e326777d56d91261cc585f.jpg") ;
+}
+
+#image {
+    /* background-image: url("https://i.pinimg.com/originals/a6/f0/b8/a6f0b85367e326777d56d91261cc585f.jpg");
+    object-fit: cover;
+    position: absolute */
+    background: rgb(39, 34, 94);
+}
+
+/* .image {
+    
+    object-fit: contain;
+} */

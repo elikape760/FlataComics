@@ -3,11 +3,16 @@ import Header from "./Header";
 import AddComics from "./AddComics";
 import ComicList from "./ComicList";
 import Search from "./Search"
+import 'semantic-ui-css/semantic.min.css'
+import { Grid, Image } from 'semantic-ui-react'
+
+
 
 
 function App() {
   const [comics, setComics] = useState([])
   const [searchTerm, setSearchTerm] = useState("");
+  const [sellers, setSellers] = useState("")
 
   useEffect(() => {
     fetch('http://localhost:9292/comics')
@@ -42,19 +47,33 @@ function App() {
   const displayedComics = comics.filter((comic) => {
     return comic.super_hero.toLowerCase().includes(searchTerm.toLowerCase());
   });
+  
+
+    // useEffect(() => {
+    //     fetch('http://localhost:9292/sellers')
+    //       .then(resp => resp.json())
+    //       .then(data => {
+    //         setSellers(data)
+    //       });
+    //   }, [])
+      
+      // const sellerList = sellers.map((seller) => {
+      //   return seller 
+      // })
+
 
   return (
-    <div>
-      <Header />
-      <Search
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm} />
-      <AddComics
-        handleNewComic={handleNewComic} />
+    <div id="image">
+      <Header
+      searchTerm={searchTerm}
+      setSearchTerm={setSearchTerm}
+      handleNewComic={handleNewComic} />
       <ComicList
+        // seller ={sellerList}
         comics={displayedComics}
         handleDeleteComic={handleDeleteComic}
         handleUpdateComic={handleUpdateComic} />
+ 
         
     </div>
   );

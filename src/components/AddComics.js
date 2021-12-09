@@ -43,7 +43,7 @@ function MyComics({ handleNewComic }) {
     }
 
     return (
-        <div>
+        <div className="new-comic-form">
             <h2>New Comics</h2>
             <form onSubmit={handlePost}>
                 <input
